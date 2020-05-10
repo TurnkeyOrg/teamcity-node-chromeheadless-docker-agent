@@ -27,8 +27,8 @@ RUN apt-get update && \
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
 
-# RUN apt-get install -y firefox &&\
-# 	apt-get clean all
+RUN apt-get install -y firefox && \
+	apt-get clean all
 
 ENV DISPLAY=:99
 ENV CHROME_BIN /usr/bin/google-chrome
